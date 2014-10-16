@@ -1,0 +1,40 @@
+Product Release Plan - CMPS115 - Fall 2014
+Updated 10/15/14
+Product name: Drum Synth/Sequencing Software
+Team name: tRiLLbEaTs
+Members: Alfred Young, Gabe de la Mora, Chris Egan, Anthony Assi, Giselle Gutierrez
+Release name: DrumSynth 1.0 (to be revised)
+Release date: Dec. 10
+
+High level goals:
+
+	The goal of this project is to produce a drum synthesizer/sequencer that emulates the workflow of devices such as the Roland TR808.  Up to eight channels can be added to a session, each containing a synth module or sample module. A synth module synthesizes a single precussive tone and allows for modulation of the synthesis parameters such as volume and pitch envelope.  A sample channel can hold a single audio sample from an external source. Some control over sample playback parameters will also be supported, such as pitch and volume. 
+	Furthermore, the sounds produced by each channel can be sequenced in the sequencer, which appears as a 2x8 grid, each box representing a beat in a short loop. The sequencer provides controls for tempo and swing. As a stretch goal, the software would be able to export the sequenced loop as a .wav or .mp3 file making it a usable tool for digital music production.  
+
+User Stories/Sprint Plan:
+
+Sprint 1:
+
+As a percussive musician, I want to be able to modularly add sampled elements to my composition so that I can use them to create full drum loops and breaks. 5 story points
+
+As a digital artist, I want an intuitive interface that allows me to quickly add and subtract percussive elements to/from my session so that I can quickly sketch out musical ideas. 5 story points
+
+As a sound designer, I want percussive modules who's volume can be changed so that I can balance the volume of samples that may be too low or high. 2 story points
+
+Sprint 2:
+
+As a percussive musician, I want to be able to modularly add synthesized percussion to my composition so that I can use them to create full drum loops and breaks. 8 story points
+
+As a sound designer, I want to be able to control the synthesis parameters of each synth module so that I can create interesting percussive elements. 3 story points
+
+As a digital artist, I want an intuitive sequencer interface that allows me to quickly compose loops and drum breaks from the sounds I have sampled and synthesized. 5 story points
+
+Sprint 3:
+
+As a sound designer, I want to access to simple effects such as filters and reverb so that I can apply them to percussive modules and create more interesting percussive elements. 3 story points
+
+As a percussive musician, I want to be able to alter the tempo of the sequencers playback as well as add swing so that I can create a variety of styles of drum loops. 5 story points
+
+As a digital artist, I want to be able to export my compositions to audio files that I can use in a digital audio workstation. ? story points
+
+As a digital artist and computer application user, I want a polished user interface so that I can use it without impediments to my creativity such as having to work around bugs and learn idiosyncrasies of the application. 8 story points
