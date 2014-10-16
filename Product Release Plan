@@ -8,8 +8,14 @@ Release date: Dec. 10
 
 High level goals:
 
-	The goal of this project is to produce a drum synthesizer/sequencer that emulates the workflow of devices such as the Roland TR808.  Up to eight channels can be added to a session, each containing a synth module or sample module. A synth module synthesizes a single precussive tone and allows for modulation of the synthesis parameters such as volume and pitch envelope.  A sample channel can hold a single audio sample from an external source. Some control over sample playback parameters will also be supported, such as pitch and volume. 
-	Furthermore, the sounds produced by each channel can be sequenced in the sequencer, which appears as a 2x8 grid, each box representing a beat in a short loop. The sequencer provides controls for tempo and swing. As a stretch goal, the software would be able to export the sequenced loop as a .wav or .mp3 file making it a usable tool for digital music production.  
+The goal of this project is to produce a drum synthesizer/sequencer that emulates the workflow of devices such as the Roland TR808.  
+Up to eight channels can be added to a session, each containing a synth module or sample module. 
+A synth module synthesizes a single precussive tone and allows for modulation of the synthesis parameters such as volume and pitch envelope.  
+A sample channel can hold a single audio sample from an external source. 
+Some control over sample playback parameters will also be supported, such as pitch and volume. 
+Furthermore, the sounds produced by each channel can be sequenced in the sequencer, which appears as a 2x8 grid, each box representing a beat in a short loop. 
+The sequencer provides controls for tempo and swing. 
+As a stretch goal, the software would be able to export the sequenced loop as a .wav or .mp3 file making it a usable tool for digital music production.  
 
 User Stories/Sprint Plan:
 
