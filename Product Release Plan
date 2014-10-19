@@ -31,16 +31,23 @@ Sprint 2:
 
 As a percussive musician, I want to be able to modularly add synthesized percussion to my composition so that I can use them to create full drum loops and breaks. 8 story points
 
+As a digital artist, I want an intuitive sequencer interface that allows me to quickly compose loops and drum breaks from the sounds I have sampled and synthesized. 5 story points
+
 As a sound designer, I want to be able to control the synthesis parameters of each synth module so that I can create interesting percussive elements. 3 story points
 
-As a digital artist, I want an intuitive sequencer interface that allows me to quickly compose loops and drum breaks from the sounds I have sampled and synthesized. 5 story points
 
 Sprint 3:
 
-As a sound designer, I want to access to simple effects such as filters and reverb so that I can apply them to percussive modules and create more interesting percussive elements. 3 story points
+As a digital artist and computer application user, I want a polished user interface so that I can use it without impediments to my creativity such as having to work around bugs and learn idiosyncrasies of the application. 8 story points
 
 As a percussive musician, I want to be able to alter the tempo of the sequencers playback as well as add swing so that I can create a variety of styles of drum loops. 5 story points
 
+As a sound designer, I want to access to simple effects such as filters and reverb so that I can apply them to percussive modules and create more interesting percussive elements. 3 story points
+
 As a digital artist, I want to be able to export my compositions to audio files that I can use in a digital audio workstation. ? story points
 
-As a digital artist and computer application user, I want a polished user interface so that I can use it without impediments to my creativity such as having to work around bugs and learn idiosyncrasies of the application. 8 story points
+
+Backlog:
+
+As a digital audio producer I need to be able to export my files in an mp3 or WAV format for future use or listening. 5 story points
+
