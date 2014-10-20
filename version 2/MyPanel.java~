@@ -10,6 +10,7 @@ class MyPanel extends JPanel
 {
  
    JLabel label;
+ 
    JButton play;
    JSlider volumeSlider;
    JSlider pitchSlider;
