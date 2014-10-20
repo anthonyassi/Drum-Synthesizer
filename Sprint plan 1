@@ -1,0 +1,32 @@
+SPRINT PLAN 1
+
+GOAL: Be able to add sample channels that load and playback. Have a basic structure of the functional interface.
+
+
+USER STORIES/TASKS
+1) As a percussive musician, I want to be able to modularly add sampled elements to my composition so that I can use them to create full drum loops and breaks. 5 story points
+	1)File loading
+		~12 hours
+
+2) As a digital artist, I want an intuitive interface that allows me to quickly add and subtract percussive elements to/from my session so that I can quickly sketch out musical ideas. 5 story points
+	1)Discrete panels with ability to add more panels
+		~15-20 hours
+	2)Play/Parameter controls
+		~10 hours
+
+3)As a sound designer, I want percussive modules who's volume can be changed so that I can balance the volume of samples that may be too low or high. 2 story points
+	1)Filter, volume, pitch parameters
+		~5 hours
+
+TEAM MEMBERS
+Alfred Young (Product Owner/Developer)
+	-User story 2, task 1
+	-User story 3, task 1
+Anthony Assi (Developer)
+	-User story 2, task 1
+Chris Egan (Developer)
+	-User story 1, task 1
+Giselle Gutierrez (Developer)
+	-User story 2, task 2
+Gabe de la Mora (Scrum Master/Developer)
+	-User story 1, task 1
