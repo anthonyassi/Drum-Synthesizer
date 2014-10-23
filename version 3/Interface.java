@@ -1,9 +1,7 @@
 //VERSION 3
 //THIS VERSION STARTS WITH ONE PANEL WITH BUTTON AND SLIDER
 //THAT DONT DO ANYTHING. IMPLEMENTED "ADD" BUTTON THAT
-//ADDS PANELS TO THE WINDOW. **CLICK "ADD" AND THEN 
-//MANUALY RESIZE WINDOW IN ORDER TO SEE THE NEW CHANNEL
-
+//ADDS PANELS TO THE WINDOW.
 
 
 import java.util.Scanner;
@@ -24,7 +22,8 @@ class Interface{
   buildGUI(pane);
   
   frame.addWindowListener(new Exiter());
-  frame.pack();
+  //frame.pack();
+  frame.setSize(800,500);
   frame.setVisible(true);
   }
   
@@ -53,7 +52,7 @@ class Interface{
     
     //Put addchannel button button under last channel
     Panels[(MyPanel.numPanels-1)].add(MyPanel.addChannel);
-    
+    Panels[0].revalidate();
     //add panels to pane(window)
     pane.add(Panels[0]);
   }
