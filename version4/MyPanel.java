@@ -19,18 +19,26 @@ class MyPanel extends JPanel
 
    public MyPanel(String chanVal)
   {
-  setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+ // setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+  //setLayout(createHorizontalBox());
      num = numPanels;
      label = new JLabel();
      label.setText(chanVal);
+     add(label);
+     
+     setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
      
      play = new JButton("PLAY");
-     volumeSlider = new JSlider(0,1,1);
+     volumeSlider = new JSlider(0,100,100);
      volumeSlider.setOrientation(SwingConstants.VERTICAL);
+     
+     pitchSlider = new JSlider(0,100,100);
+     pitchSlider.setOrientation(SwingConstants.VERTICAL);
      //add panel parameters to the panel
-     add(label);
+     
      add(play);
      add(volumeSlider);
+      add(pitchSlider);
     
   }
 

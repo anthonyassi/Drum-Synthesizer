@@ -10,16 +10,17 @@ class MyPanel extends JPanel
 {
    static JButton addChannel = new JButton("ADD");
    static int numPanels;
+   int num;
    JLabel label;
    JButton play;
    JSlider volumeSlider;
    JSlider pitchSlider;
-
+   Actions action;
 
    public MyPanel(String chanVal)
   {
   setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-     
+     num = numPanels;
      label = new JLabel();
      label.setText(chanVal);
      

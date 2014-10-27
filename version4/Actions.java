@@ -18,7 +18,7 @@ class Actions implements ActionListener{
  }
  //if an action event occurs some of this code will execute depending on the action event
  public void actionPerformed(ActionEvent e){
-  System.out.println(e.getActionCommand()); 
+ // System.out.println(e.getActionCommand()); 
   
   String cmd = e.getActionCommand();
   
@@ -31,11 +31,11 @@ class Actions implements ActionListener{
         MyPanel.numPanels++;
         Interface.updateGUI(pane);
         }
-   
+   //PLAY AUDIO CLIP 
     if(cmd.contains("PLAY")){
-      System.out.println("play "+numPanel);
+      System.out.println("PLAY Panel:"+numPanel);
      JButton b =((JButton)e.getSource());
-    
+    //Panels[numPanel].playAudio();
     }
  
 }

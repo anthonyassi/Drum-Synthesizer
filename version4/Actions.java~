@@ -10,10 +10,11 @@ import javax.swing.JLabel;
 class Actions implements ActionListener{
  MyPanel[] panels;
  Container pane;
- 
- Actions(MyPanel[] panels,Container pane){
+ int numPanel;
+ Actions(MyPanel[] panels,Container pane,int numPanel){
   this.panels = panels;
   this.pane = pane;
+  this.numPanel = numPanel;
  }
  //if an action event occurs some of this code will execute depending on the action event
  public void actionPerformed(ActionEvent e){
@@ -32,8 +33,9 @@ class Actions implements ActionListener{
         }
    
     if(cmd.contains("PLAY")){
-      System.out.println("play works");
-     e.getSource();
+      System.out.println("play "+numPanel);
+     JButton b =((JButton)e.getSource());
+    
     }
  
 }

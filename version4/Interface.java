@@ -20,7 +20,6 @@ class Interface{
   JFrame frame = new JFrame("Drum Synthesizer");
   Container pane = frame.getContentPane();
   
-  
   buildGUI(pane);
   
   frame.addWindowListener(new Exiter());
@@ -39,17 +38,24 @@ class Interface{
     Actions doAction = new Actions(Panels,pane,0);
     MyPanel.addChannel.addActionListener(doAction);
    Panels[0].play.addActionListener(doAction);
-    updateGUI(pane);
+   SliderListener listen = new SliderListener(Panels, pane, 0);
+   Panels[0].volumeSlider.addChangeListener(listen);
+   updateGUI(pane);
     
   }
   
   static void updateGUI(Container pane){
    //if updateGUI is called from Actions class then creat new panel
     if(MyPanel.numPanels>1){
+
       int i = MyPanel.numPanels-1;
+      
       Panels[i]  = new MyPanel("Channel"+(i+1));
       Actions doAction = new Actions(Panels,pane,i);
       Panels[i].play.addActionListener(doAction);
+      SliderListener listen = new SliderListener(Panels, pane, i);
+   Panels[i].volumeSlider.addChangeListener(listen);
+     
       Panels[0].add(Panels[i]);
     }
   

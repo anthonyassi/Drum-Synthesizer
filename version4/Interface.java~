@@ -36,7 +36,7 @@ class Interface{
     Panels[0] = new MyPanel("Channel 1");
     MyPanel.numPanels = 1;
     //Create action listen and give it to addpanel button
-    Actions doAction = new Actions(Panels,pane);
+    Actions doAction = new Actions(Panels,pane,0);
     MyPanel.addChannel.addActionListener(doAction);
    Panels[0].play.addActionListener(doAction);
     updateGUI(pane);
@@ -48,7 +48,7 @@ class Interface{
     if(MyPanel.numPanels>1){
       int i = MyPanel.numPanels-1;
       Panels[i]  = new MyPanel("Channel"+(i+1));
-      Actions doAction = new Actions(Panels,pane);
+      Actions doAction = new Actions(Panels,pane,i);
       Panels[i].play.addActionListener(doAction);
       Panels[0].add(Panels[i]);
     }

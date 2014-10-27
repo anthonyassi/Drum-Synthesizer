@@ -1,0 +1,18 @@
+import javax.swing.*;
+import java.awt.event.*;
+import java.util.Scanner;
+import java.io.*;
+import java.awt.*;
+import javax.swing.*;
+import static java.awt.BorderLayout.*;
+
+
+class SliderListener implements ChangeListener {
+    public void stateChanged(ChangeEvent e) {
+        JSlider source = (JSlider)e.getSource();
+        if (!source.getValueIsAdjusting()) {
+            int fps = (int)source.getValue();
+            ...
+        }    
+    }
+}
