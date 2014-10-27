@@ -32,7 +32,8 @@ class Actions implements ActionListener{
         }
    
     if(cmd.contains("PLAY")){
-      
+      System.out.println("play works");
+     e.getSource();
     }
  
 }
