@@ -30,7 +30,11 @@ class Actions implements ActionListener{
         MyPanel.numPanels++;
         Interface.updateGUI(pane);
         }
-      
+   
+    if(cmd.contains("PLAY")){
+      System.out.println("play works");
+     e.getSource();
+    }
  
 }
  
