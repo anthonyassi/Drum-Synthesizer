@@ -1,3 +1,4 @@
+import javax.swing.event.ChangeEvent.*;
 import javax.swing.event.*; 
 import javax.swing.*;
 import java.awt.event.*;
@@ -19,6 +20,7 @@ class SliderListener implements ChangeListener {
  }
     public void stateChanged(ChangeEvent e) {
         JSlider source = (JSlider)e.getSource();
+        String cmd = e.getActionCommand();
         System.out.println("Panel: "+numPanel+" value: "+source.getValue());
            
             
