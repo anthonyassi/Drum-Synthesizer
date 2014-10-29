@@ -11,7 +11,7 @@ class SamplePlayer{
 
     Synthesizer synth = JSyn.createSynthesizer();
     synth.start();
-    File sample = new File("/Users/anthony/Desktop/Drum-Synthesizer/Jsyn Channel/Yamaha-SY-35-Clarinet-C5.wav");
+    File sample = new File("/afs/cats.ucsc.edu/users/l/ayoung4/CS115/Channel/jsyn channel/Yamaha-SY-35-Clarinet-C5.wav");
     FloatSample clarinetSample = SampleLoader.loadFloatSample( sample );
     VariableRateMonoReader samplePlayer = new VariableRateMonoReader();
     samplePlayer.dataQueue.queueLoop( clarinetSample, 0, clarinetSample.getNumFrames() );
