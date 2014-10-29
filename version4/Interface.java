@@ -37,25 +37,21 @@ class Interface{
     //Create action listen and give it to addpanel button
     Actions doAction = new Actions(Panels,pane,0);
     MyPanel.addChannel.addActionListener(doAction);
-   Panels[0].play.addActionListener(doAction);
-   SliderListener listen = new SliderListener(Panels, pane, 0);
-   Panels[0].volumeSlider.addChangeListener(listen);
-   updateGUI(pane);
+    Panels[0].play.addActionListener(doAction);
+    Panels[0].volumeSlider.addChangeListener(new SliderListener(Panels, pane, 0, 'v'));
+    Panels[0].pitchSlider.addChangeListener(new SliderListener(Panels, pane, 0, 'p'));
+    updateGUI(pane);
     
   }
   
   static void updateGUI(Container pane){
    //if updateGUI is called from Actions class then creat new panel
     if(MyPanel.numPanels>1){
-
       int i = MyPanel.numPanels-1;
-      
       Panels[i]  = new MyPanel("Channel"+(i+1));
-      Actions doAction = new Actions(Panels,pane,i);
-      Panels[i].play.addActionListener(doAction);
-      SliderListener listen = new SliderListener(Panels, pane, i);
-   Panels[i].volumeSlider.addChangeListener(listen);
-     
+      Panels[i].play.addActionListener(new Actions(Panels,pane,i));
+      Panels[i].volumeSlider.addChangeListener(new SliderListener(Panels, pane, i,'v'));
+      Panels[i].pitchSlider.addChangeListener(new SliderListener(Panels, pane, i,'p'));
       Panels[0].add(Panels[i]);
     }
   

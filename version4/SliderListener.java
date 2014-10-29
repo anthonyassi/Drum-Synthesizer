@@ -13,15 +13,23 @@ class SliderListener implements ChangeListener {
   MyPanel[] panels;
  Container pane;
  int numPanel;
-  SliderListener(MyPanel[] panels,Container pane,int numPanel){
+ char parameter; 
+  SliderListener(MyPanel[] panels,Container pane,int numPanel,char parameter){
   this.panels = panels;
   this.pane = pane;
   this.numPanel = numPanel;
+  this.parameter = parameter;
  }
     public void stateChanged(ChangeEvent e) {
         JSlider source = (JSlider)e.getSource();
-        String cmd = e.getActionCommand();
-        System.out.println("Panel: "+numPanel+" value: "+source.getValue());
+       
+        if(parameter=='v'){
+        System.out.println("Panel: "+numPanel+" volume: "+source.getValue());
+        }
+        else if(parameter=='p'){
+        System.out.println("Panel: "+numPanel+" pitch: "+source.getValue());
+        }
+        
            
             
     }

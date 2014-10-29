@@ -33,7 +33,7 @@ class Actions implements ActionListener{
         }
    //PLAY AUDIO CLIP 
     if(cmd.contains("PLAY")){
-      System.out.println("PLAY Panel:"+numPanel);
+      System.out.println("Panel:"+numPanel+"PLAY");
      JButton b =((JButton)e.getSource());
     //Panels[numPanel].playAudio();
     }

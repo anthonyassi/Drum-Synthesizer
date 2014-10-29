@@ -15,7 +15,7 @@ class MyPanel extends JPanel
    JButton play;
    JSlider volumeSlider;
    JSlider pitchSlider;
-   Actions action;
+   
 
    public MyPanel(String chanVal)
   {
@@ -31,14 +31,12 @@ class MyPanel extends JPanel
      play = new JButton("PLAY");
      volumeSlider = new JSlider(0,100,100);
      volumeSlider.setOrientation(SwingConstants.VERTICAL);
-     
      pitchSlider = new JSlider(0,100,100);
      pitchSlider.setOrientation(SwingConstants.VERTICAL);
      //add panel parameters to the panel
-     
      add(play);
      add(volumeSlider);
-      add(pitchSlider);
+     add(pitchSlider);
     
   }
 
