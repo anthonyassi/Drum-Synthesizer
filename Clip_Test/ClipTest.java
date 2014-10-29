@@ -17,11 +17,11 @@ import java.security.*;
 
 public class ClipTest {
 
-  public static void main(String[] args) throws Exception {
+  public static void main(String[] args) throws Exception { 
 
     // specify the sound to play
     // (assuming the sound can be played by the audio system)
-    File soundFile = new File("Yamaha-SY-35-Clarinet-C5.wav");
+    File soundFile = new File("Snare1.wav");
     AudioInputStream sound = AudioSystem.getAudioInputStream(soundFile);
 
     // load the sound into memory (a Clip)
