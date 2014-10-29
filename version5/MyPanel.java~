@@ -1,0 +1,59 @@
+import java.util.Scanner;
+import java.io.*;
+import java.awt.*;
+import javax.swing.*;
+import static java.awt.BorderLayout.*;
+import javax.swing.JLabel;
+
+import com.jsyn.*;
+import com.jsyn.data.SequentialData;
+import com.jsyn.unitgen.*;
+import com.jsyn.util.*;
+import com.jsyn.data.*;
+import java.io.*;
+
+
+class MyPanel extends JPanel
+{
+   static JButton addChannel = new JButton("ADD");
+   static int numPanels;
+   int num;
+   JLabel label;
+   JButton play;
+   JSlider volumeSlider;
+   JSlider pitchSlider;
+   
+
+   public MyPanel(String chanVal)
+  {
+ // setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+  //setLayout(createHorizontalBox());
+     num = numPanels;
+     label = new JLabel();
+     label.setText(chanVal);
+     add(label);
+     
+     setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+     
+     play = new JButton("PLAY");
+     volumeSlider = new JSlider(0,100,100);
+     volumeSlider.setOrientation(SwingConstants.VERTICAL);
+     pitchSlider = new JSlider(0,100,100);
+     pitchSlider.setOrientation(SwingConstants.VERTICAL);
+     //add panel parameters to the panel
+     add(play);
+     add(volumeSlider);
+     add(pitchSlider);
+    
+  }
+   void playAudio(){
+      Synthesizer synth = JSyn.createSynthesizer();
+    synth.start();
+    File sample = new File("/Users/anthony/Desktop/Drum-Synthesizer/version5/Yamaha-SY-35-Clarinet-C5.wav");
+    FloatSample clarinetSample = SampleLoader.loadFloatSample( sample );
+    VariableRateMonoReader samplePlayer = new VariableRateMonoReader();
+    samplePlayer.dataQueue.queueLoop( clarinetSample, 0, clarinetSample.getNumFrames() );
+    synth.stop();
+   }
+
+ }
