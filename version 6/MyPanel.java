@@ -1,7 +1,10 @@
 import java.util.Scanner;
 import java.io.*;
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
+import javax.swing.SwingUtilities;
+import javax.swing.filechooser.*;
 import static java.awt.BorderLayout.*;
 import javax.swing.JLabel;
 
@@ -19,11 +22,14 @@ class MyPanel extends JPanel
    static int numPanels;
    int num;
    JLabel label;
-   JButton play;
+   JButton play, openButton;
    JSlider volumeSlider;
    JSlider pitchSlider;
-   File sample = new File("/Users/anthony/Desktop/Drum-Synthesizer/samples/Snare1.wav");
+   File sample = new File("/Users/Chris/Documents/GitHub/Drum-Synthesizer/samples/Snare1.wav");
    
+   JTextArea log;
+   JFileChooser fc;
+ 
 
    public MyPanel(String chanVal)
   {
@@ -34,6 +40,14 @@ class MyPanel extends JPanel
      label = new JLabel();
      label.setText(chanVal);
      
+     fc = new JFileChooser();
+     fc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+
+     openButton = new JButton("Open a File");
+                                // createImageIcon("Open.png"));
+     
+     
+     
      play = new JButton("PLAY");
      volumeSlider = new JSlider(0,100,100);
      volumeSlider.setOrientation(SwingConstants.VERTICAL);
@@ -43,6 +57,7 @@ class MyPanel extends JPanel
      
      //add panel parameters to the panel
      add(label);
+     add(openButton);
      add(play);
      add(volumeSlider);
      add(pitchSlider);
