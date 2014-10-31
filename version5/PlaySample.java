@@ -32,11 +32,11 @@ public class PlaySample
  private VariableRateDataReader samplePlayer;
  private LineOut lineOut;
 
-  void test()
+  void play(File loadedSample,double volume)
  {
   
   URL sampleFile;
-    File loadedSample = new File("/Users/anthony/Desktop/Drum-Synthesizer/samples/Snare1.wav");
+   // File loadedSample = new File("/Users/anthony/Desktop/Drum-Synthesizer/samples/Snare1.wav");
   try
   {
    //sampleFile = new URL("http://www.softsynth.com/samples/Clarinet.wav");
@@ -87,7 +87,8 @@ public class PlaySample
    synth.start();
 
    samplePlayer.rate.set( sample.getFrameRate() );
-   
+   //set volume
+   samplePlayer.amplitude.set(volume/100);
    // We only need to start the LineOut. It will pull data from the
    // sample player.
    lineOut.start();
@@ -127,8 +128,8 @@ public class PlaySample
   synth.stop();
  }
 
- public static void main( String[] args )
- {
-  new PlaySample().test();
- }
+// public static void main( String[] args )
+// {
+//  new PlaySample().test();
+// }
 }

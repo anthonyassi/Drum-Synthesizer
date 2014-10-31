@@ -22,12 +22,12 @@ class MyPanel extends JPanel
    JButton play;
    JSlider volumeSlider;
    JSlider pitchSlider;
-   File sample;
+   File sample = new File("/Users/anthony/Desktop/Drum-Synthesizer/samples/Snare1.wav");
    
 
    public MyPanel(String chanVal)
   {
- // setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+ setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
  
      num = numPanels;
      //creating panel labels, buttons, and sliders

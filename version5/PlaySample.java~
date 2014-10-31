@@ -36,7 +36,7 @@ public class PlaySample
  {
   
   URL sampleFile;
-    File loadedSample = new File("/Users/anthony/Desktop/Drum-Synthesizer/Clip_Test/Snare1.wav");
+    File loadedSample = new File("/Users/anthony/Desktop/Drum-Synthesizer/samples/Snare1.wav");
   try
   {
    //sampleFile = new URL("http://www.softsynth.com/samples/Clarinet.wav");
