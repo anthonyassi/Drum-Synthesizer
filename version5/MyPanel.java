@@ -22,7 +22,7 @@ class MyPanel extends JPanel
    JButton play;
    JSlider volumeSlider;
    JSlider pitchSlider;
-   File sample = new File("/Users/anthony/Desktop/Drum-Synthesizer/samples/Snare1.wav");
+   File sample = new File("/Users/Chris/Documents/GitHub/Drum-Synthesizer/samples/Snare1.wav");
    
 
    public MyPanel(String chanVal)
