@@ -10,12 +10,12 @@ import static java.awt.BorderLayout.*;
 
 
 class SliderListener implements ChangeListener {
-  MyPanel[] panels;
+  Sampler[] samplers;
  Container pane;
  int numPanel;
  char parameter; // v=volume & p=pitch
-  SliderListener(MyPanel[] panels,Container pane,int numPanel,char parameter){
-  this.panels = panels;
+  SliderListener(Sampler[] samplers,Container pane,int numPanel,char parameter){
+  this.samplers = samplers;
   this.pane = pane;
   this.numPanel = numPanel;
   this.parameter = parameter; 

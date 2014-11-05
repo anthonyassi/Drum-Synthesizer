@@ -16,15 +16,14 @@ import javax.swing.JLabel;
 class Interface{
 
   static MyPanel[] Panels = new MyPanel[8];
-  public static void main(String[] args) {
+  public static void main(String[] args){
   JFrame frame = new JFrame("Drum Synthesizer");
   Container pane = frame.getContentPane();
-  
   
   buildGUI(pane);
   
   frame.addWindowListener(new Exiter());
-  //frame.pack();
+  
   frame.setSize(800,500);
   frame.setVisible(true);
   }
@@ -36,9 +35,12 @@ class Interface{
     Panels[0] = new MyPanel("Channel 1");
     MyPanel.numPanels = 1;
     //Create action listen and give it to addpanel button
-    Actions doAction = new Actions(Panels,pane);
+    Actions doAction = new Actions(Panels,pane,0);
     MyPanel.addChannel.addActionListener(doAction);
-   
+    Panels[0].openButton.addActionListener(doAction);
+    Panels[0].play.addActionListener(doAction);
+    Panels[0].volumeSlider.addChangeListener(new SliderListener(Panels, pane, 0, 'v'));
+    Panels[0].pitchSlider.addChangeListener(new SliderListener(Panels, pane, 0, 'p'));
     updateGUI(pane);
     
   }
@@ -48,6 +50,10 @@ class Interface{
     if(MyPanel.numPanels>1){
       int i = MyPanel.numPanels-1;
       Panels[i]  = new MyPanel("Channel"+(i+1));
+      Panels[i].openButton.addActionListener(new Actions(Panels,pane,i));
+      Panels[i].play.addActionListener(new Actions(Panels,pane,i));
+      Panels[i].volumeSlider.addChangeListener(new SliderListener(Panels, pane, i,'v'));
+      Panels[i].pitchSlider.addChangeListener(new SliderListener(Panels, pane, i,'p'));
       Panels[0].add(Panels[i]);
     }
   
@@ -58,6 +64,4 @@ class Interface{
     //add panels to pane(window)
     pane.add(Panels[0]);
   }
-  
-  
 }

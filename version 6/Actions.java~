@@ -36,7 +36,16 @@ class Actions implements ActionListener{
       PlaySample p = new PlaySample();
       p.play(Panels[numPanel].sample,Panels[numPanel].volumeSlider.getValue());
     }
- 
+    if(cmd.contains("Open a File")){
+      System.out.println("OpenEnded");
+      int returnVal = Panels[numPanel].fc.showOpenDialog(null);
+      if(returnVal == JFileChooser.APPROVE_OPTION) {
+       System.out.println("You chose to open this file: " );
+           System.out.println( Panels[numPanel].fc.getSelectedFile().getName());
+           Panels[numPanel].sample = Panels[numPanel].fc.getSelectedFile();
+    }
+    }
+    
 }
  
  
