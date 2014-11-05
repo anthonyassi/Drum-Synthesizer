@@ -7,12 +7,14 @@ import javax.swing.*;
 import static java.awt.BorderLayout.*;
 import javax.swing.JLabel;
 
+
+
 class Actions implements ActionListener{
- MyPanel[] panels;
+ MyPanel[] Panels;
  Container pane;
  int numPanel;
  Actions(MyPanel[] panels,Container pane,int numPanel){
-  this.panels = panels;
+  this.Panels = panels;
   this.pane = pane;
   this.numPanel = numPanel;
  }
@@ -22,21 +24,17 @@ class Actions implements ActionListener{
   
   String cmd = e.getActionCommand();
   
-   
-  
-  
-    
-    //if user hits add button, then increment numPanels and update the interface 
+  //if user hits add button, then increment numPanels and update the interface 
     if(cmd.contains("ADD")){
         MyPanel.numPanels++;
         Interface.updateGUI(pane);
         }
-   //PLAY AUDIO CLIP 
+   //if user hits play button
     if(cmd.contains("PLAY")){
       System.out.println("Panel:"+numPanel+"PLAY");
-     JButton b =((JButton)e.getSource());
-    //Panels[numPanel].playAudio();
-   
+      //play sample
+      PlaySample p = new PlaySample();
+      p.play(Panels[numPanel].sample,Panels[numPanel].volumeSlider.getValue());
     }
  
 }
