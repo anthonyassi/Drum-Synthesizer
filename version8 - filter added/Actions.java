@@ -26,13 +26,8 @@ class Actions implements ActionListener{
   
   //if user hits add button, then increment numSamplers and update the interface 
     if(cmd.contains("ADD")){
-<<<<<<< HEAD
         Interface.numPanels++;
         Interface.buildSynthesizer(pane);
-=======
-        Sampler.numSamplers++;
-        Interface.updateGUI(pane);
->>>>>>> FETCH_HEAD
         }
    //if user hits play button
     if(cmd.contains("PLAY")){

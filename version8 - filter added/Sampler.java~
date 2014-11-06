@@ -25,10 +25,7 @@ class Sampler extends JPanel
    JButton play, openButton;
    JSlider volumeSlider;
    JSlider pitchSlider;
-<<<<<<< HEAD
    JSlider cutoffSlider;
-=======
->>>>>>> FETCH_HEAD
    File sample = new File("/Users/Chris/Documents/GitHub/Drum-Synthesizer/samples/Snare1.wav");
    
    JTextArea log;
@@ -59,22 +56,16 @@ class Sampler extends JPanel
      pitchSlider = new JSlider(0,100,100);
      pitchSlider.setOrientation(SwingConstants.VERTICAL);
      
-<<<<<<< HEAD
      cutoffSlider = new JSlider(0,1000,100);
      cutoffSlider.setOrientation(SwingConstants.VERTICAL);
      
-=======
->>>>>>> FETCH_HEAD
      //add sampler parameters to the sampler
      add(label);
      add(openButton);
      add(play);
      add(volumeSlider);
      add(pitchSlider);
-<<<<<<< HEAD
      add(cutoffSlider);
-=======
->>>>>>> FETCH_HEAD
     
   }
    void playAudio(){

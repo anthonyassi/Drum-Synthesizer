@@ -14,14 +14,9 @@ import static java.awt.BorderLayout.*;
 import javax.swing.JLabel;
 
 class Interface{
-<<<<<<< HEAD
   static int numPanels;
   static Sampler[] samplers = new Sampler[8];
   static Synthesizer[] synthesizers = new Synthesizer[8];
-=======
-
-  static Sampler[] samplers = new Sampler[8];
->>>>>>> FETCH_HEAD
   public static void main(String[] args){
   JFrame frame = new JFrame("Drum Synthesizer");
   Container pane = frame.getContentPane();
@@ -36,16 +31,9 @@ class Interface{
   
   
   static void buildGUI(Container pane){
-<<<<<<< HEAD
     numPanels++;
     //Create Initial sampler
     samplers[0] = new Sampler();
-=======
-    
-    //Create Initial sampler
-    samplers[0] = new Sampler("Channel 1");
-    Sampler.numSamplers = 1;
->>>>>>> FETCH_HEAD
     //Create action listen and give it to addChannel button
     Actions doAction = new Actions(samplers,pane,0);
     Sampler.addChannel.addActionListener(doAction);
@@ -53,7 +41,6 @@ class Interface{
     samplers[0].play.addActionListener(doAction);
     samplers[0].volumeSlider.addChangeListener(new SliderListener(samplers, pane, 0, 'v'));
     samplers[0].pitchSlider.addChangeListener(new SliderListener(samplers, pane, 0, 'p'));
-<<<<<<< HEAD
     samplers[0].cutoffSlider.addChangeListener(new SliderListener(samplers, pane, 0, 'f'));
     buildSampler(pane);
     
@@ -64,22 +51,10 @@ class Interface{
     if(numPanels>1){
       int i = numPanels-1;
       samplers[i]  = new Sampler();
-=======
-    updateGUI(pane);
-    
-  }
-  
-  static void updateGUI(Container pane){
-   //if updateGUI is called from Actions class then creat new channel
-    if(Sampler.numSamplers>1){
-      int i = Sampler.numSamplers-1;
-      samplers[i]  = new Sampler("Channel"+(i+1));
->>>>>>> FETCH_HEAD
       samplers[i].openButton.addActionListener(new Actions(samplers,pane,i));
       samplers[i].play.addActionListener(new Actions(samplers,pane,i));
       samplers[i].volumeSlider.addChangeListener(new SliderListener(samplers, pane, i,'v'));
       samplers[i].pitchSlider.addChangeListener(new SliderListener(samplers, pane, i,'p'));
-<<<<<<< HEAD
       samplers[i].cutoffSlider.addChangeListener(new SliderListener(samplers, pane, i,'f'));
       samplers[0].add(samplers[i]);
     }
@@ -106,22 +81,10 @@ class Interface{
     
     //Put addchannel button button under last channel
     synthesizers[(numPanels-1)].add(Sampler.addChannel);
-=======
-      samplers[i].pitchSlider.addChangeListener(new SliderListener(samplers, pane, i,'f'));
-      samplers[0].add(samplers[i]);
-    }
-  
-    
-    //Put addchannel button button under last channel
-    samplers[(Sampler.numSamplers-1)].add(Sampler.addChannel);
->>>>>>> FETCH_HEAD
     samplers[0].revalidate();
     //add samplers to pane(window)
     pane.add(samplers[0]);
   }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> FETCH_HEAD
 }
