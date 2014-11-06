@@ -19,18 +19,27 @@ import java.io.*;
 class Sampler extends JPanel
 {
    static JButton addChannel = new JButton("ADD");
+<<<<<<< HEAD
+=======
+   static int numSamplers;
+>>>>>>> FETCH_HEAD
    int num;
    JLabel label;
    JButton play, openButton;
    JSlider volumeSlider;
    JSlider pitchSlider;
    JSlider cutoffSlider;
+<<<<<<< HEAD
    File sample;
+=======
+   File sample = new File("/Users/Chris/Documents/GitHub/Drum-Synthesizer/samples/Snare1.wav");
+>>>>>>> FETCH_HEAD
    
    JTextArea log;
    JFileChooser fc;
  
 
+<<<<<<< HEAD
    public Sampler()
   {
  setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -39,6 +48,16 @@ class Sampler extends JPanel
      //creating sampler labels, buttons, and sliders
      label = new JLabel();
      label.setText("Sampler "+num);
+=======
+   public Sampler(String chanVal)
+  {
+ setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+ 
+     num = numSamplers;
+     //creating sampler labels, buttons, and sliders
+     label = new JLabel();
+     label.setText(chanVal);
+>>>>>>> FETCH_HEAD
      
      fc = new JFileChooser();
      fc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
@@ -67,5 +86,11 @@ class Sampler extends JPanel
      add(cutoffSlider);
     
   }
+<<<<<<< HEAD
+=======
+   void playAudio(){
+      
+   }
+>>>>>>> FETCH_HEAD
 
  }

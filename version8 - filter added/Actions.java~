@@ -34,7 +34,11 @@ class Actions implements ActionListener{
       System.out.println("Panel:"+numSampler+"PLAY");
       //play sample
       PlaySample p = new PlaySample();
+<<<<<<< HEAD
       p.play(samplers[numSampler].sample, samplers[numSampler].volumeSlider.getValue(), samplers[numSampler].cutoffSlider.getValue() );
+=======
+      p.play(samplers[numSampler].sample,samplers[numSampler].volumeSlider.getValue());
+>>>>>>> FETCH_HEAD
     }
     if(cmd.contains("Open a File")){
       System.out.println("OpenEnded");

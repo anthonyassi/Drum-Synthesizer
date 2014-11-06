@@ -54,7 +54,10 @@ class Interface{
       samplers[i].play.addActionListener(new Actions(samplers,pane,i));
       samplers[i].volumeSlider.addChangeListener(new SliderListener(samplers, pane, i,'v'));
       samplers[i].pitchSlider.addChangeListener(new SliderListener(samplers, pane, i,'p'));
+<<<<<<< HEAD
       samplers[i].pitchSlider.addChangeListener(new SliderListener(samplers, pane, i,'f'));
+=======
+>>>>>>> FETCH_HEAD
       samplers[0].add(samplers[i]);
     }
   
