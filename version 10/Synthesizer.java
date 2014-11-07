@@ -15,6 +15,12 @@ import com.jsyn.util.*;
 import com.jsyn.data.*;
 import java.io.*;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JButton;
+import javax.swing.JMenuItem;
+import javax.swing.JPopupMenu;
+
 class Synthesizer extends JPanel
 {
    
@@ -25,6 +31,7 @@ class Synthesizer extends JPanel
    JSlider volumeSlider;
    JSlider pitchSlider;
    JSlider cutoffSlider;
+   JPopupMenu waveMenu;
    
  
 
@@ -44,6 +51,8 @@ class Synthesizer extends JPanel
      label.setText("Synthesizer "+num);
      
      play = new JButton("PLAY");
+     
+    
      volumeSlider = new JSlider(0,100,100);
      volumeSlider.setOrientation(SwingConstants.VERTICAL);
      
@@ -59,6 +68,7 @@ class Synthesizer extends JPanel
      add(volumeSlider);
      add(pitchSlider);
      add(cutoffSlider);
+     
     
   }
 

@@ -21,26 +21,29 @@ public class PlaySynth
  UnitGenerator ugen;
  UnitVoice voice;
  LineOut lineOut;
-
+ WhiteNoise noise;
  void play(double volume, double pitch, double cutoff)
  {
   // Create a context for the synthesizer.
   synth = JSyn.createSynthesizer();
-  // Set output latency to 123 msec because this is not an interactive app.
+  // Set output latency to 123 msec because this is not an interactive app. noise
   synth.getAudioDeviceManager().setSuggestedOutputLatency( 0.040 );
   
   // Add a tone generator.
+  
+  //synth.add( noise  = new WhiteNoise());
+ // voice = (UnitVoice) noise;
+ 
   synth.add( ugen = new SineOscillator() );
-  //synth.add( ugen = new SineOscillator() );
-  //synth.add( ugen = new SubtractiveSynthVoice() );
   voice = (UnitVoice) ugen;
+  
   // Add an output mixer.
   synth.add( lineOut = new LineOut() );
   
   
   // Connect the oscillator to the left and right audio output.
-  voice.getOutput().connect( 0, lineOut.input, 0 );
-  voice.getOutput().connect( 0, lineOut.input, 1 );
+   voice.getOutput().connect( 0, lineOut.input, 0 );
+   voice.getOutput().connect( 0, lineOut.input, 1 );
   
   // Start synthesizer using default stereo output at 44100 Hz.
   synth.start();
@@ -63,7 +66,7 @@ public class PlaySynth
   voice.noteOn( pitch, volume/100, timeStamp );
   //amp envelope is a function of amplitude(volume over time 
   //between note on and note off. 
-  voice.noteOff( timeStamp.makeRelative( onTime ) );
+   voice.noteOff( timeStamp.makeRelative( onTime ) );
 
   
 
