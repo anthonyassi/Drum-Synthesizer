@@ -8,7 +8,7 @@ import static java.awt.BorderLayout.*;
 import javax.swing.JLabel;
 
 
-//ACTION LISTENER FOR SAMPLER BUTTONS
+
 class Actions implements ActionListener{
  Sampler[] samplers;
  Container pane;

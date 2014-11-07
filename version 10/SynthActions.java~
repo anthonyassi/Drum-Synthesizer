@@ -8,7 +8,7 @@ import static java.awt.BorderLayout.*;
 import javax.swing.JLabel;
 
 
-//ACTION LISTENER FOR SYNTH BUTTONS
+
 class SynthActions implements ActionListener{
  Synthesizer[] synthesizers;
  Container pane;
@@ -27,8 +27,7 @@ class SynthActions implements ActionListener{
    //if user hits play button
     if(cmd.contains("PLAY")){
       System.out.println("Panel:"+numSynthesizer+"PLAY");
-      PlaySynth p = new PlaySynth();
-      p.play(synthesizers[numSynthesizer].volumeSlider.getValue(), synthesizers[numSynthesizer].pitchSlider.getValue(),synthesizers[numSynthesizer].cutoffSlider.getValue() );
+      //synthesizer sound
     }
     
 }

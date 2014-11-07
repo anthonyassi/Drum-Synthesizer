@@ -8,7 +8,7 @@ import java.awt.*;
 import javax.swing.*;
 import static java.awt.BorderLayout.*;
 
-
+//CHANGE LISTNER FOR SYNTH SLIDERS
 class SynthListener implements ChangeListener {
  Synthesizer[] synthesizers;
  Container pane;

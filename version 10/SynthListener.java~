@@ -8,16 +8,16 @@ import java.awt.*;
 import javax.swing.*;
 import static java.awt.BorderLayout.*;
 
-//CHNAGE LISENER FOR SAMPLER SLIDERS
-class SliderListener implements ChangeListener {
-  Sampler[] samplers;
+
+class SynthListener implements ChangeListener {
+ Synthesizer[] synthesizers;
  Container pane;
- int numSampler;
+ int numSynthesizer;
  char parameter; // v=volume, p=pitch & f=filter cutoff 
-  SliderListener(Sampler[] samplers,Container pane,int numSampler,char parameter){
-  this.samplers = samplers;
+  SynthListener(Synthesizer[] synthesizers,Container pane,int numSynthesizer,char parameter){
+  this.synthesizers = synthesizers;
   this.pane = pane;
-  this.numSampler = numSampler;
+  this.numSynthesizer = numSynthesizer;
   this.parameter = parameter; 
  }
   //listens to any changes of any slider
@@ -25,14 +25,14 @@ class SliderListener implements ChangeListener {
         JSlider source = (JSlider)e.getSource();
         //volume
         if(parameter=='v'){
-        System.out.println("Panel: "+numSampler+" volume: "+source.getValue());
+        System.out.println("Panel: "+numSynthesizer+" volume: "+source.getValue());
         }
         //volume
         else if(parameter=='p'){
-        System.out.println("Panel: "+numSampler+" pitch: "+source.getValue());
+        System.out.println("Panel: "+numSynthesizer+" pitch: "+source.getValue());
         }
         else if(parameter=='f'){
-        System.out.println("Panel: "+numSampler+" filter cutoff: "+source.getValue());
+        System.out.println("Panel: "+numSynthesizer+" filter cutoff: "+source.getValue());
         }
      }
 }

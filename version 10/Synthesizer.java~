@@ -47,7 +47,7 @@ class Synthesizer extends JPanel
      volumeSlider = new JSlider(0,100,100);
      volumeSlider.setOrientation(SwingConstants.VERTICAL);
      
-     pitchSlider = new JSlider(0,1000,250);
+     pitchSlider = new JSlider(0,100,100);
      pitchSlider.setOrientation(SwingConstants.VERTICAL);
      
      cutoffSlider = new JSlider(0,1000,100);
