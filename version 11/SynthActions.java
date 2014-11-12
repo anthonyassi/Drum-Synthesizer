@@ -23,7 +23,7 @@ class SynthActions implements ActionListener{
  // System.out.println(e.getActionCommand()); 
   
   String cmd = e.getActionCommand();
-  
+
   //if user hits sine button
    if(cmd.contains("SINE")){
      synthesizers[numSynthesizer].sin =true; 
@@ -32,13 +32,16 @@ class SynthActions implements ActionListener{
    if(cmd.contains("NOISE")){
      synthesizers[numSynthesizer].sin =false; 
    }
+   
   
    //if user hits play button
     if(cmd.contains("PLAY")){
       System.out.println("Panel:"+numSynthesizer+"PLAY");
       PlaySynth p = new PlaySynth();
       p.play(synthesizers[numSynthesizer].volumeSlider.getValue(), synthesizers[numSynthesizer].pitchSlider.getValue(),
-             synthesizers[numSynthesizer].cutoffSlider.getValue(),synthesizers[numSynthesizer].sin );
+             synthesizers[numSynthesizer].cutoffSlider.getValue(),synthesizers[numSynthesizer].sin, 
+                synthesizers[numSynthesizer].attackSlider.getValue(), synthesizers[numSynthesizer].sustainSlider.getValue(),
+                  synthesizers[numSynthesizer].releaseSlider.getValue()  );
     }
     
 }
