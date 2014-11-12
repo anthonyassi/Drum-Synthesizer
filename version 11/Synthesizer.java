@@ -31,6 +31,7 @@ class Synthesizer extends JPanel
    JSlider volumeSlider;
    JSlider pitchSlider;
    JSlider cutoffSlider;
+   JSlider attackSlider, sustainSlider, releaseSlider;
    boolean sin; //true= sin oscillator ; false = noise oscillator
  
 
@@ -54,6 +55,7 @@ class Synthesizer extends JPanel
      sine = new JButton("SINE");
      sin = true;
      noise = new JButton("NOISE");
+     
     
      volumeSlider = new JSlider(0,100,100);
      volumeSlider.setOrientation(SwingConstants.VERTICAL);
@@ -64,6 +66,17 @@ class Synthesizer extends JPanel
      cutoffSlider = new JSlider(0,1000,100);
      cutoffSlider.setOrientation(SwingConstants.VERTICAL);
      
+     attackSlider = new JSlider(0, 20);
+     attackSlider.setOrientation(SwingConstants.VERTICAL);
+     
+     sustainSlider = new JSlider(0, 20);
+     sustainSlider.setOrientation(SwingConstants.VERTICAL);
+
+     releaseSlider = new JSlider(0, 20);
+     releaseSlider.setOrientation(SwingConstants.VERTICAL);
+     
+     
+     
      //add sampler parameters to the sampler
      add(label);
      add(play);
@@ -72,6 +85,9 @@ class Synthesizer extends JPanel
      add(volumeSlider);
      add(pitchSlider);
      add(cutoffSlider);
+     add(attackSlider);
+     add(sustainSlider);
+     add(releaseSlider);
      
     
   }

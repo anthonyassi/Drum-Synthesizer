@@ -11,6 +11,8 @@ import com.softsynth.shared.time.TimeStamp;
 import com.jsyn.unitgen.*;
 import com.jsyn.unitgen.Circuit;
 import com.jsyn.instruments.NoiseHit;
+import com.jsyn.data.*;
+
 /**
  * Play notes using timestamped noteOn and noteOff methods of the UnitVoice.
  * 
@@ -25,7 +27,7 @@ public class PlaySynth
  LineOut lineOut;
  NoiseHit noise;
  //WhiteNoise noise;
- void play(double volume, double pitch, double cutoff,boolean sin)
+ void play(double volume, double pitch, double cutoff,boolean sin, double attk, double sust, double release)
  {
   // Create a context for the synthesizer.
   synth = JSyn.createSynthesizer();
@@ -39,7 +41,7 @@ public class PlaySynth
     voice = (UnitVoice) ugen;
   }
   //noise
-  else{
+  else {
    synth.add( noise  = new NoiseHit());
    // synth.add( noise  = new WhiteNoise());
   }
@@ -54,10 +56,37 @@ public class PlaySynth
    voice.getOutput().connect( 0, lineOut.input, 1 );
   }
   //noise
-  else{
+  else   {
     noise.getOutput().connect( 0, lineOut.input, 0 );
     noise.getOutput().connect( 0, lineOut.input, 1 );
+    
+     
   }
+  
+  
+  //if(env){
+             // Create an amplitude envelope and fill it with data.
+        double[] ampData = {
+                attk, -0.9, // duration,value pair 0, "attack"
+                sust, -0.5, // pair 1, "decay"
+                release, -0.4,  // pair 2, "release"
+        };
+        SegmentedEnvelope ampEnvelope = new SegmentedEnvelope( ampData );
+
+        // Hang at end of decay segment to provide a "sustain" segment.
+        //ampEnvelope.setSustainBegin( 3 );
+        //ampEnvelope.setSustainEnd( 3 );
+
+        // Play the envelope using queueOn so that it uses the sustain and release information.
+        VariableRateDataReader ampEnv = new VariableRateMonoReader() ;
+        synth.add( ampEnv );
+        ampEnv.output.connect( 0, lineOut.input, 0 );
+        ampEnv.dataQueue.queueOn( ampEnvelope );    
+    
+ //} 
+  
+  
+  
   // Start synthesizer using default stereo output at 44100 Hz.
   synth.start();
  
