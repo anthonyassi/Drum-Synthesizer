@@ -1,0 +1,47 @@
+MEMBERS – Alfred Young, Gabe de la Mora, Anthony Assi, Christopher Egan, Giselle Gutierez
+
+WHAT THINGS SHOULD WE STOP DOING
+None	 
+
+WHAT THINGS SHOULD WE START DOING
+- Reach out for help when stumped by a specific task in an effort to dampen procrastination. 	
+- Remembering proper coding style for better readability
+
+WHAT IS WORKING WELL THAT WE SHOULD CONTINUE DOING
+- Breaking tasks down to as small of tasks as possible, so that individual team members can handle them easily. 
+
+WHAT WORK WAS COMPLETED
+-Loose ends tied up from sprint 1: 9 story points
+  a)  Format sliders into horizontal rows – 5 hours
+  b)  add synthesizer/sample dropdown menu to the add button functionality – 5 hours
+  c)  add exception when someone hits the play button in an empty panel – 5 hours
+
+-As a percussive musician, I want to be able to modularly add synthesized percussion to my composition so that I can use them to create full drum loops and breaks. 7 story points
+  a)	Create new class for synthesizer channel type using sampler as template. – 8 hours
+  b)	Generate sound and control via channel play button. – 5 hours
+
+-As a sound designer, I want to be able to control the synthesis parameters of each synth module so that I can create interesting percussive elements. 8 story points
+  a)	Add pitch and a selection of filters to edit the sound. - 10 hours
+  b)	Add attack, decay, sustain, release, overall volume to edit the sound envelope. - 10 hours
+
+WHAT WORK WAS NOT COMPLETED
+None
+
+RATE OF COMPLETION
+
+Sprint 2:
+	- 24/24 story points completed, 1.6 story points per day
+	- 48/48 work hours commited, 3.2 work hours per day
+
+Sprint 1:
+	- 5/12 Story Points completed, 0.3 story points per day
+  - 25/30 work hours commited, 1.8 work hours per day
+
+Average/Sum
+	- 29/36 story points completed (on time)
+  - 28/28 story points completed total (accounting for sprint 1/2 overlap),  1 story point per 	day
+	- 73/78 work hours commited, 2.5 work hours per day
+
+
+
+
