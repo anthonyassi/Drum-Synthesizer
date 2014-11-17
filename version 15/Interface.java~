@@ -1,4 +1,4 @@
-//VERSION 15
+//VERSION 12
 //FEEL FREE TO ADD, REPLACE, FIX CODE, JUST SAVE IT 
 //AS A NEW VERSION.
 
@@ -101,7 +101,6 @@ class Interface{
       synthesizers[i].pitchSlider.addChangeListener(new SynthListener(synthesizers, pane, i,'p'));
       synthesizers[i].lowCutoffSlider.addChangeListener(new SynthListener(synthesizers, pane, i,'l'));
       synthesizers[i].highCutoffSlider.addChangeListener(new SynthListener(synthesizers, pane, i,'h'));
-      samplers[0].add(synthesizers[i].label, "wrap");
       samplers[0].add(synthesizers[i].play, "split 5");
       samplers[0].add(synthesizers[i].synthType);
       samplers[0].add(synthesizers[i].volumeSlider, "gapleft 82");

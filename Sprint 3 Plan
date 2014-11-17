@@ -1,0 +1,29 @@
+SPRINT 3 OUTLINE - Team tRiLLbEaTz
+GOALS
+- Polish user interface
+- Implement sequencer with adjustable tempo and swing
+- Implement simple effects such as reverb
+- Implement ability to export drum loops to .wav or .mp3 files
+
+USER STORIES/TASKS
+1) As a digital artist and computer application user, I want a polished user interface so that I can use it without impediments to my creativity such as having to work around bugs and learn idiosyncrasies of the application. 8 story points/15 work hours
+	- Add borders to channel pannels
+	- Add a new project button to reset program
+	- Add labels to sliders and channels
+2) As a percussive musician, I want an interface through which to sequence drum sounds as well as be able to alter the tempo of the sequencer's playback and add swing so that I can create a variety of styles of drum loops. 5 story points/10 work hours
+	- Create sequencer pannel with 16 beats (1 bar)
+	- Add tempo slider
+	- Add swing slider
+3) As a sound designer, I want to access to simple effects such as reverb so that I can apply them to percussive modules and create more interesting percussive elements. 3 story points/4 work hours
+	- Add reverb slider
+	- Add flanger slider
+4) As a digital artist, I want to be able to export my compositions to audio files that I can use in a digital audio workstation. ? story points/? work hours (strech goal)
+	- Create jsyn recorder object
+	- Route lineOut output to recorder 
+
+TEAM MEMBERS
+Alfred Young (Product Owner/Developer)
+Anthony Assi (SCRUM master/Developer)
+Chris Egan (Developer)
+Gabe de la Mora (Developer)
+Giselle Gutierez (Developer)
