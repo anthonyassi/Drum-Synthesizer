@@ -33,7 +33,7 @@ class Synthesizer extends JPanel{
   JPopupMenu typeMenu = new JPopupMenu();
   JMenuItem newSin = new JMenuItem("sine");
   JMenuItem newNoise = new JMenuItem("noise"); 
-
+  Sequencer sequence;
   JSlider volumeSlider;
   JSlider pitchSlider;
   JSlider lowCutoffSlider;
@@ -49,7 +49,7 @@ class Synthesizer extends JPanel{
     sin = true;
     play = new JButton("PLAY");
     synthType = new JButton("Type[sine]");
-      
+     sequence = new Sequencer();
     typeMenu.add(newSin);
     typeMenu.add(newNoise);
     

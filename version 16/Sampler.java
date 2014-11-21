@@ -29,14 +29,14 @@ class Sampler extends JPanel{
   File sample;
   JTextArea log;
   JFileChooser fc;
-  Sequencer sequencer;
+  Sequencer sequence;
    
   public Sampler(){
     setLayout(new MigLayout()); 
     
     num = Interface.numPanels;
      //creating sampler labels, buttons, and sliders
-    sequencer = new Sequencer();
+    sequence = new Sequencer();
     label = new JLabel();
     label.setText("Sampler "+num);
      
@@ -69,7 +69,7 @@ class Sampler extends JPanel{
     });
     
     //add sampler parameters to the sampler
-    sequencer.add();
+   // sequencer.add();
     add(label, "wrap");
     add(openButton, "split 5");
     add(play);
@@ -77,7 +77,7 @@ class Sampler extends JPanel{
     add(pitchSlider);
     add(lowCutoffSlider );    
     add( highCutoffSlider );
-    add( sequencer, "wrap" );
+    add( sequence, "wrap" );
   }
 // END
 }

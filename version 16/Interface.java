@@ -58,6 +58,10 @@ class Interface{
     samplers[0].pitchSlider.addChangeListener(new SliderListener(samplers, pane, 0, 'p'));
     samplers[0].lowCutoffSlider.addChangeListener(new SliderListener(samplers, pane, 0, 'l'));
     samplers[0].highCutoffSlider.addChangeListener(new SliderListener(samplers, pane, 0, 'h'));
+    //create actionlistener for sequencer
+    for(int j=0;j<16;j++){
+        samplers[0].sequence.buttons[j].addActionListener(new SeqActions(samplers[0].sequence,pane,j));
+      }
     buildSampler(pane);
   }
   
@@ -72,6 +76,10 @@ class Interface{
       samplers[i].pitchSlider.addChangeListener(new SliderListener(samplers, pane, i,'p'));
       samplers[i].lowCutoffSlider.addChangeListener(new SliderListener(samplers, pane, i,'l'));
       samplers[i].highCutoffSlider.addChangeListener(new SliderListener(samplers, pane, i,'h'));
+      //create actionlistener for sequencer
+      for(int j=0;j<16;j++){
+        samplers[i].sequence.buttons[j].addActionListener(new SeqActions(samplers[i].sequence,pane,j));
+      }
       samplers[0].add(samplers[i].label, "wrap");
       samplers[0].add(samplers[i].openButton, "split 5");
       samplers[0].add(samplers[i].play);
@@ -79,7 +87,7 @@ class Interface{
       samplers[0].add(samplers[i].pitchSlider);
       samplers[0].add(samplers[i].lowCutoffSlider);
       samplers[0].add(samplers[i].highCutoffSlider, "wrap");
-      samplers[0].add( samplers[i].sequencer );
+      samplers[0].add( samplers[i].sequence );
     }
   
     //Put addchannel button button under last channel
@@ -102,12 +110,19 @@ class Interface{
       synthesizers[i].pitchSlider.addChangeListener(new SynthListener(synthesizers, pane, i,'p'));
       synthesizers[i].lowCutoffSlider.addChangeListener(new SynthListener(synthesizers, pane, i,'l'));
       synthesizers[i].highCutoffSlider.addChangeListener(new SynthListener(synthesizers, pane, i,'h'));
+      //create actionlistener for sequencer
+      for(int j=0;j<16;j++){
+        synthesizers[i].sequence.buttons[j].addActionListener(new SeqActions(synthesizers[i].sequence,pane,j));
+      }
+      samplers[0].add(synthesizers[i].label, "wrap");
       samplers[0].add(synthesizers[i].play, "split 5");
       samplers[0].add(synthesizers[i].synthType);
       samplers[0].add(synthesizers[i].volumeSlider, "gapleft 82");
       samplers[0].add(synthesizers[i].pitchSlider);
       samplers[0].add(synthesizers[i].lowCutoffSlider);
       samplers[0].add(synthesizers[i].highCutoffSlider, "wrap");
+      samplers[0].add( synthesizers[i].sequence );
+      
     }
     
     //Put addchannel button button under last channel

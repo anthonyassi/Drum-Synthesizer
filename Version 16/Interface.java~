@@ -78,7 +78,8 @@ class Interface{
       samplers[0].add(samplers[i].volumeSlider, "gapleft 80");
       samplers[0].add(samplers[i].pitchSlider);
       samplers[0].add(samplers[i].lowCutoffSlider);
-      samplers[0].add(samplers[i].highCutoffSlider, "wrap"); 
+      samplers[0].add(samplers[i].highCutoffSlider, "wrap");
+      samplers[0].add( samplers[i].sequencer );
     }
   
     //Put addchannel button button under last channel

@@ -25,8 +25,8 @@ public class PlaySynth
  UnitGenerator ugen;
  UnitVoice voice;
  LineOut lineOut;
- NoiseHit noise;
- //WhiteNoise noise;
+ //NoiseHit noise;
+ WhiteNoise noise;
  void play(double volume, double pitch, double cutoff,boolean sin, double attk, double sust, double release)
  {
   // Create a context for the synthesizer.
@@ -42,8 +42,8 @@ public class PlaySynth
   }
   //noise
   else {
-   synth.add( noise  = new NoiseHit());
-   // synth.add( noise  = new WhiteNoise());
+  // synth.add( noise  = new NoiseHit());
+   synth.add( noise  = new WhiteNoise());
   }
   // Add an output mixer.
   synth.add( lineOut = new LineOut() );
@@ -74,8 +74,8 @@ public class PlaySynth
         SegmentedEnvelope ampEnvelope = new SegmentedEnvelope( ampData );
 
         // Hang at end of decay segment to provide a "sustain" segment.
-        //ampEnvelope.setSustainBegin( 3 );
-        //ampEnvelope.setSustainEnd( 3 );
+        ampEnvelope.setSustainBegin( 3 );
+        ampEnvelope.setSustainEnd( 3 );
 
         // Play the envelope using queueOn so that it uses the sustain and release information.
         VariableRateDataReader ampEnv = new VariableRateMonoReader() ;
@@ -112,10 +112,10 @@ public class PlaySynth
   //between note on and note off. 
    voice.noteOff( timeStamp.makeRelative( onTime ) );
   }
-  else{
-   noise.noteOn( pitch, volume/100, timeStamp );
-   noise.noteOff( timeStamp.makeRelative( onTime ) );
-  }
+ // else{
+ //  noise.noteOn( pitch, volume/100, timeStamp );
+ //  noise.noteOff( timeStamp.makeRelative( onTime ) );
+//  }
   
 
   // Sleep while the song is being generated in the background thread.
