@@ -115,16 +115,22 @@ class Interface{
       synthesizers[i].lowCutoffSlider.addChangeListener(new SynthListener(synthesizers, pane, i,'l'));
       synthesizers[i].highCutoffSlider.addChangeListener(new SynthListener(synthesizers, pane, i,'h'));
       samplers[0].add(synthesizers[i].samplerLabel, "wrap");
-      samplers[0].add(synthesizers[i].play, "split 6");
+      samplers[0].add(synthesizers[i].play, "split 9");
       samplers[0].add(synthesizers[i].synthType);
       samplers[0].add(synthesizers[i].volumeSlider, "gapleft 82");
       samplers[0].add(synthesizers[i].pitchSlider, "gapleft 60");
       samplers[0].add(synthesizers[i].lowCutoffSlider, "gapleft 60");
-      samplers[0].add(synthesizers[i].highCutoffSlider, "gapleft 60, wrap");
-      samplers[0].add(synthesizers[i].voluLabel, "split 4, gapleft 228");
+      samplers[0].add(synthesizers[i].highCutoffSlider, "gapleft 60");
+      samplers[0].add(synthesizers[i].attackSlider, "gapleft 60");
+      samplers[0].add(synthesizers[i].sustainSlider, "gapleft 60");
+      samplers[0].add(synthesizers[i].releaseSlider, "gapleft 60, wrap");
+      samplers[0].add(synthesizers[i].voluLabel, "split 7, gapleft 228");
       samplers[0].add(synthesizers[i].pitchLabel, "gapleft 42");
       samplers[0].add(synthesizers[i].lowLabel, "gapleft 38");
-      samplers[0].add(synthesizers[i].highLabel, "gapleft 36, wrap");
+      samplers[0].add(synthesizers[i].highLabel, "gapleft 36");
+      samplers[0].add(synthesizers[i].susLabel, "gapleft 32");
+      samplers[0].add(synthesizers[i].attLabel, "gapleft 33");
+      samplers[0].add(synthesizers[i].relLabel, "gapleft 35, wrap");
     }
     
     //Put addchannel button button under last channel
