@@ -128,8 +128,8 @@ class Interface{
       samplers[0].add(synthesizers[i].pitchLabel, "gapleft 42");
       samplers[0].add(synthesizers[i].lowLabel, "gapleft 38");
       samplers[0].add(synthesizers[i].highLabel, "gapleft 36");
-      samplers[0].add(synthesizers[i].susLabel, "gapleft 32");
-      samplers[0].add(synthesizers[i].attLabel, "gapleft 33");
+      samplers[0].add(synthesizers[i].attLabel, "gapleft 32");
+      samplers[0].add(synthesizers[i].susLabel, "gapleft 35");
       samplers[0].add(synthesizers[i].relLabel, "gapleft 35, wrap");
     }
     

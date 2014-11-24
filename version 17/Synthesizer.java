@@ -41,12 +41,16 @@ class Synthesizer extends JPanel{
   JSlider attackSlider, sustainSlider, releaseSlider;
   boolean sin; //true= sin oscillator ; false = noise oscillator
  
+  Sequencer sequencer;
 
   public Synthesizer(){
     num = Interface.numPanels;
     //creating sampler labels, buttons, and sliders
     samplerLabel = new JLabel();
-    samplerLabel.setText("Sampler "+num);
+    samplerLabel.setText("Synthesizer "+num);
+    
+    sequencer = new Sequencer();
+   sequencer.add();
     
     voluLabel = new JLabel();
     voluLabel.setText("Volume");

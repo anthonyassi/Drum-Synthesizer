@@ -20,11 +20,7 @@ import net.miginfocom.swing.MigLayout;
 class Sampler extends JPanel{
   static JButton addChannel = new JButton("+New...");
   int num;
-  JLabel samplerLabel;
-  JLabel voluLabel;
-  JLabel pitchLabel;
-  JLabel lowLabel;
-  JLabel highLabel;
+  JLabel samplerLabel, voluLabel, pitchLabel, lowLabel, highLabel;
   JButton play, openButton;
   JSlider volumeSlider;
   JSlider pitchSlider;

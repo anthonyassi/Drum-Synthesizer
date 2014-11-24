@@ -19,6 +19,7 @@ import net.miginfocom.swing.MigLayout;
 
 class Sequencer extends JPanel{
   int[] sequence = new int[16];
+  JButton[] buttons = new JButton[16];
   
   public Sequencer(){
     setLayout( new MigLayout("wrap 8")); 
@@ -26,7 +27,8 @@ class Sequencer extends JPanel{
   
   public void add(){
     for( int i = 0; i < 16; i++ ){
-      add( new JButton( "" + ( i + 1 ) ), "w 50!, h 40!" );
+      buttons[i] = new JButton( "" + ( i + 1 ) );
+      add(buttons[i] , "w 50!, h 40!" );
       sequence[i] = 0;
     } 
   }

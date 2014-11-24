@@ -23,7 +23,7 @@ class Interface{
   static JPopupMenu channelMenu = new JPopupMenu();
   static JMenuItem newSamp = new JMenuItem("Sampler");
   static JMenuItem newSynth = new JMenuItem("Synth"); 
-  static Sequencer sequencer = new Sequencer();
+//  static Sequencer sequencer = new Sequencer();
   static Actions doAction;
   
   
@@ -34,11 +34,11 @@ class Interface{
   
     buildGUI(pane);
     
-    sequencer.add();
+  //  sequencer.add();
 
     JPanel insidePanel = new JPanel();                 
     insidePanel.setLayout(new BorderLayout());
-    insidePanel.add(sequencer, BorderLayout.EAST);  
+   // insidePanel.add(sequencer, BorderLayout.EAST);  
     pane.add(insidePanel, BorderLayout.SOUTH);
   
     frame.addWindowListener(new Exiter());
@@ -67,6 +67,9 @@ class Interface{
     samplers[0].pitchSlider.addChangeListener(new SliderListener(samplers, pane, 0, 'p'));
     samplers[0].lowCutoffSlider.addChangeListener(new SliderListener(samplers, pane, 0, 'l'));
     samplers[0].highCutoffSlider.addChangeListener(new SliderListener(samplers, pane, 0, 'h'));
+    for(int j=0;j<16;j++){
+        samplers[0].sequencer.buttons[j].addActionListener(new SeqActions(samplers[0].sequencer,pane,j));
+      }
     buildSampler(pane);
   }
   
@@ -81,14 +84,18 @@ class Interface{
       samplers[i].pitchSlider.addChangeListener(new SliderListener(samplers, pane, i,'p'));
       samplers[i].lowCutoffSlider.addChangeListener(new SliderListener(samplers, pane, i,'l'));
       samplers[i].highCutoffSlider.addChangeListener(new SliderListener(samplers, pane, i,'h'));
+      for(int j=0;j<16;j++){
+        samplers[i].sequencer.buttons[j].addActionListener(new SeqActions(samplers[i].sequencer,pane,j));
+      }
       samplers[0].add(samplers[i].samplerLabel, "wrap");
-      samplers[0].add(samplers[i].openButton, "split 6");
+      samplers[0].add(samplers[i].openButton, "split 7");
       samplers[0].add(samplers[i].play);
       samplers[0].add(samplers[i].volumeSlider, "gapleft 80");
       samplers[0].add(samplers[i].pitchSlider,"gapleft 60");
       samplers[0].add(samplers[i].lowCutoffSlider, "gapleft 60");
-      samplers[0].add(samplers[i].highCutoffSlider, "gapleft 60, wrap");
-      samplers[0].add(samplers[i].voluLabel, "split 4, gapleft 228");
+      samplers[0].add(samplers[i].highCutoffSlider, "gapleft 60");
+      samplers[0].add(samplers[i].sequencer, "gapleft 30, wrap");
+      samplers[0].add(samplers[i].voluLabel, "split 5, gapleft 228");
       samplers[0].add(samplers[i].pitchLabel, "gapleft 42");
       samplers[0].add(samplers[i].lowLabel, "gapleft 38");
       samplers[0].add(samplers[i].highLabel, "gapleft 36, wrap");
@@ -114,8 +121,11 @@ class Interface{
       synthesizers[i].pitchSlider.addChangeListener(new SynthListener(synthesizers, pane, i,'p'));
       synthesizers[i].lowCutoffSlider.addChangeListener(new SynthListener(synthesizers, pane, i,'l'));
       synthesizers[i].highCutoffSlider.addChangeListener(new SynthListener(synthesizers, pane, i,'h'));
+      for(int j=0;j<16;j++){
+        synthesizers[i].sequencer.buttons[j].addActionListener(new SeqActions(synthesizers[i].sequencer,pane,j));
+      }
       samplers[0].add(synthesizers[i].samplerLabel, "wrap");
-      samplers[0].add(synthesizers[i].play, "split 9");
+      samplers[0].add(synthesizers[i].play, "split 10");
       samplers[0].add(synthesizers[i].synthType);
       samplers[0].add(synthesizers[i].volumeSlider, "gapleft 82");
       samplers[0].add(synthesizers[i].pitchSlider, "gapleft 60");
@@ -123,7 +133,8 @@ class Interface{
       samplers[0].add(synthesizers[i].highCutoffSlider, "gapleft 60");
       samplers[0].add(synthesizers[i].attackSlider, "gapleft 60");
       samplers[0].add(synthesizers[i].sustainSlider, "gapleft 60");
-      samplers[0].add(synthesizers[i].releaseSlider, "gapleft 60, wrap");
+      samplers[0].add(synthesizers[i].releaseSlider, "gapleft 60");
+      samplers[0].add(synthesizers[i].sequencer, "gapleft 60, wrap");
       samplers[0].add(synthesizers[i].voluLabel, "split 7, gapleft 228");
       samplers[0].add(synthesizers[i].pitchLabel, "gapleft 42");
       samplers[0].add(synthesizers[i].lowLabel, "gapleft 38");

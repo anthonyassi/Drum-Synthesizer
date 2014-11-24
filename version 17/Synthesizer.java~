@@ -28,11 +28,7 @@ class Synthesizer extends JPanel{
    
   static int numSynths;
   int num;
-  JLabel samplerLabel;
-  JLabel voluLabel;
-  JLabel pitchLabel;
-  JLabel lowLabel;
-  JLabel highLabel;
+  JLabel samplerLabel, voluLabel, pitchLabel, lowLabel, highLabel, attLabel, susLabel, relLabel;
   JButton play,synthType;
   JPopupMenu typeMenu = new JPopupMenu();
   JMenuItem newSin = new JMenuItem("sine");
@@ -42,6 +38,7 @@ class Synthesizer extends JPanel{
   JSlider pitchSlider;
   JSlider lowCutoffSlider;
   JSlider highCutoffSlider;
+  JSlider attackSlider, sustainSlider, releaseSlider;
   boolean sin; //true= sin oscillator ; false = noise oscillator
  
 
@@ -62,6 +59,15 @@ class Synthesizer extends JPanel{
     
     highLabel = new JLabel();
     highLabel.setText("HighCut");   
+    
+    attLabel = new JLabel();
+    attLabel.setText("Attack"); 
+    
+    susLabel = new JLabel();
+    susLabel.setText("Sustain"); 
+    
+    relLabel = new JLabel();
+    relLabel.setText("Release"); 
     
     sin = true;
     play = new JButton("PLAY");
@@ -87,6 +93,15 @@ class Synthesizer extends JPanel{
     
     highCutoffSlider = new JSlider(0,1000,100);
     highCutoffSlider.setOrientation(SwingConstants.VERTICAL);
+    
+    attackSlider = new JSlider(0, 20);
+    attackSlider.setOrientation(SwingConstants.VERTICAL);
+     
+    sustainSlider = new JSlider(0, 20);
+    sustainSlider.setOrientation(SwingConstants.VERTICAL);
+
+    releaseSlider = new JSlider(0, 20);
+    releaseSlider.setOrientation(SwingConstants.VERTICAL);
      
     //added sampler parameters to the sampler in Interface.buildSynthesizer
        
