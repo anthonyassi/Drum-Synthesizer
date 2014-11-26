@@ -1,0 +1,14 @@
+tRiLLbEaTz Audio Synth/Sequencer User Document
+
+Getting Started: 
+   The tRiLLbEaTz Audio Synth/Sequencer is a java application packaged as a Jar file. To run the Jar from the command line, type java -jar TBass.
+   The tRiLLbEaTz Audio Synth/Sequencer can be used to create short drum loops which can be exported to .wav files for use in a digital audio workstation. Up to 8 drum sounds can be added to a session and sequenced into loops. Each drum sound is held in a channel. To add a new channel to an new session, click the +New button which appears below existing channels. You have the option of adding either a sample channel or synthesizer channel. 
+
+Sample Channels:
+   Sample channels can be loaded with a sample in .wav format from memory. To do so, click the Open a File button on the left side of the channel to locate the file in the directory browser. To audition the sample, click the play button adjacent to the Open a File button. Sample channels also contain sliders that control the following parameters: volume, pitch, lowpass filter frequency cutoff and highpass filter frequency cutoff.
+
+Synthesizer Channels:
+   Synthesizer channels are used to synthesize drum sounds. The shape of the sound's waveform can be selected using the Type[...] button that appears on the left of the channel. Either a sine or white noise shape can be chosen. To audition the synthesized sound, click the play button adjacent to the Type[...] button. Like sample channels, synthesizer channels also contain sliders that control volume, pitch, lowpass filter frequency cutoff and highpass filter frequency cutoff. Additionally the synthesizer channel contains slider controlling the attack, sustain and release of the synthesized sound.
+
+Sequencing Sounds:
+   Each channel also contains a 16-note sequencer that appears at the right of the channel. When the Play Sequence button that is adjacent to the +New button is clicked, the 16 notes will be played in order. Each channel's sequencer consists of 16 buttons that each correspond to a note to be played. Clicking on a button will queue the sound contained in a particular channel to be played at the position corresponding to the number on the button. For example, to create a simple boom bap drum beat, sequence a bass drum sound to be played at positions 1, 5, 9 and 13 and a snare drum sound at positions 3, 7, 11 and 15. The tempo at which the sequence is looped is set using the tempo slider that appears next to the Play Sequence and +New button.
