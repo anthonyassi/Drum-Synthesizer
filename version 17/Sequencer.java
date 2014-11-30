@@ -32,4 +32,6 @@ class Sequencer extends JPanel{
       sequence[i] = 0;
     } 
   }
+  
+  
 }

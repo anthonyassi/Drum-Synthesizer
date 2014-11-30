@@ -20,6 +20,7 @@ import com.jsyn.util.*;
 import com.jsyn.data.*;
 import java.io.*;
 
+
 /**
  * Play a sample from a WAV file using JSyn.
  * 
@@ -32,7 +33,9 @@ public class PlaySample{
   private FilterStateVariable filter;
   private FilterStateVariable highpass;
   private LineOut lineOut;
-
+  
+  
+ 
   void play( File loadedSample,double volume, double lowCutoff, double highCutoff ){
     
     if( loadedSample == null ) return;

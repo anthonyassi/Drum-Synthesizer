@@ -37,11 +37,9 @@ class SeqActions implements ActionListener{
       //modify sequence array
       System.out.println((""+(j+1)));
       sequence[j] = 1;
-      buttons[j].setBackground(Color.RED);
-      buttons[j].setOpaque(true);
       //print sequence array
       for(int k=0;k<16;k++){
-        System.out.println("seqence["+(k+1)+"]"+sequence[k]);
+        System.out.println("seqence["+k+"]"+sequence[k]);
       }
       
       

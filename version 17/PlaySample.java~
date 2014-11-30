@@ -29,8 +29,8 @@ import java.io.*;
 public class PlaySample{
   private Synthesizer synth;
   private VariableRateDataReader samplePlayer;
-  private FilterStateVariable lowpass;
-  private FilterHighPass highpass;
+  private FilterStateVariable filter;
+  private FilterStateVariable highpass;
   private LineOut lineOut;
 
   void play( File loadedSample,double volume, double lowCutoff, double highCutoff ){
@@ -50,9 +50,9 @@ public class PlaySample{
   
     synth = JSyn.createSynthesizer();
     // add a filter generator and set cutoff frequency
-    lowpass = new FilterStateVariable();
-    lowpass.frequency.set( lowCutoff );
-    highpass = new FilterHighPass();
+    filter = new FilterStateVariable();
+    highpass = new FilterStateVariable();
+    filter.frequency.set( lowCutoff );
     highpass.frequency.set( highCutoff );
     FloatSample sample;
     try{
@@ -70,19 +70,17 @@ public class PlaySample{
 
       if( sample.getChannelsPerFrame() == 1 ){
         synth.add( samplePlayer = new VariableRateMonoReader() );
-        synth.add( lowpass );
+        synth.add( filter );
         // route sample output to filter, route filter output to lineout
-        samplePlayer.output.connect( 0, lowpass.input, 0 );
-        lowpass.output.connect( 0, highpass.input, 0 );
-        highpass.output.connect( 0, lineOut.input, 0 );
+        samplePlayer.output.connect( 0, filter.input, 0 );
+        filter.lowPass.connect( 0, lineOut.input, 0 );
       }
       else if( sample.getChannelsPerFrame() == 2 ){
         synth.add( samplePlayer = new VariableRateStereoReader() );
-        synth.add( lowpass );
+        synth.add( filter );
         // again, route inputs. for some reason, filter has only mono output?
-        samplePlayer.output.connect( 0, lowpass.input, 0 );
-        lowpass.output.connect( 0, highpass.input, 0 );
-        highpass.output.connect( 0, lineOut.input, 0 );
+        samplePlayer.output.connect( 0, filter.input, 0 );
+        filter.lowPass.connect( 0, lineOut.input, 1 );
       }
       else{
         throw new RuntimeException(
