@@ -48,10 +48,17 @@ class SeqActions implements ActionListener{
       //find which button
     if(cmd.equals(""+(j+1))){
       //modify sequence array
+      if(sequence[j] == 0){
       System.out.println((""+(j+1)));
       sequence[j] = 1;
       buttons[j].setBackground(Color.RED);
       buttons[j].setOpaque(true);
+      }
+      else{
+       System.out.println((""+(j+1)));
+      sequence[j] = 0;
+      buttons[j].setOpaque(false);
+      }
       //print sequence array
       for(int k=0;k<16;k++){
         System.out.println("seqence["+(k+1)+"]"+sequence[k]);
