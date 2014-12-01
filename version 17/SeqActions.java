@@ -15,6 +15,7 @@ class SeqActions implements ActionListener{
   int[] sequence;
   Container pane;
   int i;
+  boolean isSeqPlaying;
 
  
   SeqActions(Sequencer s,Container pane,int index){
@@ -23,6 +24,7 @@ class SeqActions implements ActionListener{
     this.buttons = s.buttons;
     this.sequence = s.sequence;
     this.i = index;
+    isSeqPlaying = false;
   }
   //if an action event occurs some of this code will execute depending on the action event
   public void actionPerformed(ActionEvent e){
@@ -30,6 +32,17 @@ class SeqActions implements ActionListener{
   
     String cmd = e.getActionCommand();
     
+    
+    if(cmd.equals(">")){
+      if(isSeqPlaying==false){
+        isSeqPlaying = true;
+      System.out.println("play sequencer");
+      }
+      else{
+        isSeqPlaying = false;
+      System.out.println("stop sequencer");
+      }
+    }
     //iterate through all buttons
     for(int j=0;j<16;j++){ 
       //find which button

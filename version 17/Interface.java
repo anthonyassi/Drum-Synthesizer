@@ -20,6 +20,7 @@ class Interface{
   static Sampler[] samplers = new Sampler[8];
   static Synthesizer[] synthesizers = new Synthesizer[8]; 
   static JButton addChannel = new JButton("+New...");
+  static JButton playSeq = new JButton(">");
   static JPopupMenu channelMenu = new JPopupMenu();
   static JMenuItem newSamp = new JMenuItem("Sampler");
   static JMenuItem newSynth = new JMenuItem("Synth"); 
@@ -60,7 +61,8 @@ class Interface{
     addChannel.addActionListener(doAction);
     newSamp.addActionListener(doAction);
     newSynth.addActionListener(doAction);
-
+    playSeq.addActionListener(new SeqActions(samplers[0].sequencer,pane,0));
+    
     samplers[0].openButton.addActionListener(doAction);
     samplers[0].play.addActionListener(doAction);
     samplers[0].volumeSlider.addChangeListener(new SliderListener(samplers, pane, 0, 'v'));
@@ -102,6 +104,7 @@ class Interface{
     }
   
     //Put addchannel button button under last channel
+    samplers[0].add(playSeq,"wrap");
     samplers[0].add(Sampler.addChannel, "wrap");
     samplers[0].revalidate();
     //add samplers to pane(window)
@@ -145,6 +148,7 @@ class Interface{
     }
     
     //Put addchannel button button under last channel
+    samplers[0].add(playSeq,"wrap");
     samplers[0].add(Sampler.addChannel, "wrap");
     samplers[0].revalidate();
     
