@@ -1,0 +1,29 @@
+import javax.swing.*;
+import java.awt.event.*;
+import java.util.Scanner;
+import java.io.*;
+import java.awt.*;
+import javax.swing.*;
+import static java.awt.BorderLayout.*;
+import javax.swing.JLabel;
+
+class SynthListener implements ActionListener{
+    Sampler[] samplers;
+  Container pane;
+  int numSampler;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}
