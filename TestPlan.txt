@@ -1,1 +1,104 @@
-Team Trill BeatsTest Plan	Opening a file:Opening different files besides .wav to make sure the program can handle this exception. Opening very big files.Play Button:Playing the sampler without loading a file to make sure it can handle this exception. Playing the sampler with a loaded .wav file to make sure it will play. Volume slider:Print the slider value associated with volume to make sure it is going up and down when the user uses the slider. Using qualitative testing with our ears as we vary the volume slider. 
+Team Trill BeatsTest Plan	SAMPLEROpening a file:1.Click the open button.
+2.Browse local computer for a .wav file. 
+3.Click open button.Post-condition: playing audio with play button.Successful print statement.
+Play Sampler Button:
+Precondition: File is opened.1.Click play button.
+Post-condition:	Audio plays. 
+Successful print statement.
+Volume slider:
+Precondition: File is opened.
+1.Set slider to 0.
+2.Click play button.
+Post-condition: audio plays but completely silent.
+1.Set slider to half (.5).
+2.Click play button.
+Post-condition: audio is audible.
+1.Set slider to max (1).
+2.Click play button.
+Post-condition: audio is louder.
+Successful print statement.
+
+Pitch Slider:
+Precondition: File is opened.
+1.Set slider to 0.
+2.Click play button.
+Post-condition: audio plays at low pitch.
+1.Set slider to half (.5).
+2.Click play button.
+Post-condition: audio plays at higher pitch.
+1.Set slider to max (1).
+2.Click play button.
+Post-condition: audio plays at very high pitch.
+Successful print statement.
+
+Low Pass Slider:
+Precondition: File is opened.
+1.Set slider to 0.
+2.Click play button.
+Post-condition: audio is silent because all frequencies are cut. 
+1.Set slider to half (.5).
+2.Click play button.
+Post-condition: audio plays with some high frequencies cut.
+1.Set slider to max (1).
+2.Click play button.
+Post-condition: audio plays with no high frequencies cut.
+Successful print statement.
+
+SYNTHESIZER
+
+Play Synthesizer Button:
+Precondition: Synth channel opened.1.Click play button.
+Post-condition:	Synthesized sound plays. 
+Successful print statement.
+
+Waveform Menu:
+Precondition: Synth channel opened.
+1. Click New Waveform button.
+2. Choose SINE or NOISE wave. 
+3.Click play.
+Post-condition: SINE or NOISE is played. 
+
+Volume slider:
+Precondition: Synth channel opened.
+1.Set slider to 0.
+2.Click play button.
+Post-condition: synthesized sound plays but completely silent.
+1.Set slider to half (.5).
+2.Click play button.
+Post-condition: synthesized sound is audible.
+1.Set slider to max (1).
+2.Click play button.
+Post-condition: synthesized sound is louder.
+Successful print statement.
+
+Pitch Slider:
+Precondition: Synth channel opened.
+1.Set slider to 0.
+2.Click play button.
+Post-condition: synthesized sound plays at low pitch.
+1.Set slider to half (.5).
+2.Click play button.
+Post-condition: synthesized sound plays at higher pitch.
+1.Set slider to max (1).
+2.Click play button.
+Post-condition: synthesized sound plays at very high pitch.
+Successful print statement.
+
+Low Pass Slider:
+Precondition: Synth channel opened.
+1.Set slider to 0.
+2.Click play button.
+Post-condition: synthesized sound is silent because all frequencies are cut. 
+1.Set slider to half (.5).
+2.Click play button.
+Post-condition: synthesized sound plays with some high frequencies cut.
+1.Set slider to max (1).
+2.Click play button.
+Post-condition: synthesized sound plays with no high frequencies cut.
+Successful print statement.
+
+
+
+SEQUENCER
+
+ 
