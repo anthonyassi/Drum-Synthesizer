@@ -86,10 +86,10 @@ class Sampler extends JPanel{
     add(samplerLabel, "wrap");
     add(openButton, "split 7");
     add(play);
-    add(volumeSlider, "gapleft 60, h 76!");
-    add(pitchSlider, "gapleft 20, h 76!");
-    add(lowCutoffSlider, "gapleft 20, h 76!");    
-    add(highCutoffSlider, "gapleft 20, h 76!");
+    add(volumeSlider, "gapleft 60, h 74!");
+    add(pitchSlider, "gapleft 20, h 74!");
+    add(lowCutoffSlider, "gapleft 20, h 74!");    
+    add(highCutoffSlider, "gapleft 20, h 74!");
     add(sequencer,"gapleft 147, wrap"); 
     add(voluLabel, "split 5, gapleft 227");
     add(pitchLabel, "gapleft 31");

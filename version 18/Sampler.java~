@@ -7,7 +7,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.filechooser.*;
 import static java.awt.BorderLayout.*;
 import javax.swing.JLabel;
-
+import javax.swing.border.*;
 import com.jsyn.*;
 import com.jsyn.data.SequentialData;
 import com.jsyn.unitgen.*;
@@ -30,28 +30,29 @@ class Sampler extends JPanel{
   JTextArea log;
   JFileChooser fc;
   Sequencer sequencer;
+  static Border bl = BorderFactory.createLineBorder(Color.GRAY, 10);
    
   public Sampler(){
     setLayout(new MigLayout()); 
-    
+    setBorder(bl);
     num = Interface.numPanels;
      //creating sampler labels, buttons, and sliders
-   sequencer = new Sequencer();
-   sequencer.add();
+    sequencer = new Sequencer();
+    sequencer.add();
     samplerLabel = new JLabel();
     samplerLabel.setText("Sampler "+num);
     
     voluLabel = new JLabel();
-    voluLabel.setText("Volume");
+    voluLabel.setText("V");
     
     pitchLabel = new JLabel();
-    pitchLabel.setText("Pitch");
+    pitchLabel.setText("P");
     
     lowLabel = new JLabel();
-    lowLabel.setText("LowCut");
+    lowLabel.setText("LC");
     
     highLabel = new JLabel();
-    highLabel.setText("HighCut");
+    highLabel.setText("HC");
     
     fc = new JFileChooser();
     fc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
@@ -85,15 +86,16 @@ class Sampler extends JPanel{
     add(samplerLabel, "wrap");
     add(openButton, "split 7");
     add(play);
-    add(volumeSlider, "gapleft 80");
-    add(pitchSlider, "gapleft 60");
-    add(lowCutoffSlider, "gapleft 60");    
-    add(highCutoffSlider, "gapleft 60");
-    add(sequencer,"gapleft 30, wrap"); 
-    add(voluLabel, "split 5, gapleft 228");
-    add(pitchLabel, "gapleft 42");
-    add(lowLabel, "gapleft 38");
-    add(highLabel, "gapleft 36, wrap");
+    add(volumeSlider, "gapleft 60, h 76!");
+    add(pitchSlider, "gapleft 20, h 76!");
+    add(lowCutoffSlider, "gapleft 20, h 76!");    
+    add(highCutoffSlider, "gapleft 20, h 76!");
+    add(sequencer,"gapleft 147, wrap"); 
+    add(voluLabel, "split 5, gapleft 227");
+    add(pitchLabel, "gapleft 31");
+    add(lowLabel, "gapleft 26");
+    add(highLabel, "gapleft 22, wrap");
+    add(new JButton(""), " w 1000!, h 1!, wrap");
     
   }
 // END

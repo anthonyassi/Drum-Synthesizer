@@ -28,7 +28,7 @@ class Sequencer extends JPanel{
   public void add(){
     for( int i = 0; i < 16; i++ ){
       buttons[i] = new JButton( "" + ( i + 1 ) );
-      add(buttons[i] , "w 50!, h 40!, h 30!" );
+      add(buttons[i] , "w 50!, h 40!, h 25!" );
       sequence[i] = 0;
     } 
   }
