@@ -1,0 +1,42 @@
+TEAM: tRiLLbEaTz
+PROJECT: TBass
+MEMBERS: Alfred Young, Anthony Assi, Chris Egan, Giselle Gutierez, Gabe de la Mora
+
+TBass Audio Synth/Sampler/Sequencer User Document
+
+Getting Started: 
+
+The tRiLLbEaTz Audio Synth/Sequencer is a java application packaged as a Jar file. To run the Jar from the command line, type java -jar TBass.
+
+The tRiLLbEaTz Audio Synth/Sequencer can be used to create short drum loops. Up to 8 drum sounds can be added to a session and sequenced into loops. Each drum sound is held in a channel. To add a new channel to an new session, click the Add Channel button which appears at the top of the screen above the channel window. You have the option of adding either a sample channel or synthesizer channel. 
+
+
+Sample Channels:
+
+- A sampler channel can be loaded with a sample in .wav format from memory. To do so, click the Open a File button on the left side of the channel to locate the file in the directory browser. 
+
+- To audition the sample, click the play button adjacent to the Open a File button. 
+
+- Sample channels also contain sliders that control the sound's volume as well as the a frequency cutoff level of the channel's low pass filter.
+
+
+Synthesizer Channels:
+
+- Synthesizer channels are used to synthesize drum sounds. 
+
+- The shape of the sound's waveform can be selected using the Waveform button that appears on the left of the channel. The button will be labeled with the type of waveform the synthesizer channel is currently set to. Either a sine or white noise shape can be chosen, though the channel's initial setting is sine wave. 
+
+- To audition the synthesized sound, click the play button adjacent to the Waveform button. 
+
+- Like sample channels, synthesizer channels also contain sliders. The sliders in a synthesizer channel control volume, pitch and lowpass filter frequency cutoff, as well as the attack and release of the sound's volume envelope. 
+
+
+Sequencing Sounds:
+
+- Each channel also contains a 16-note sequencer that appears at the right of the channel. Each button in the sequencer corresponds to a 1/16 note in the drum loop. Clicking the buttons will toggle the note on (the button will turn red) or off (the button will turn white).
+
+- When a note is turned on in the sequence, the sound in the channel will be played at the corresponding point in the loop. For example, turning all 16 notes on will play the channel's sound at regular 1/16 note intervals. Turning every other note on will play the sound at 1/8 note intervals.
+
+- When the Play button that is adjacent to the New Channel button is clicked, the 16 notes of each channel's sequencer will be played in order. 
+ 
+- For example, to create a simple boom bap drum beat, sequence a bass drum sound to be played at positions 1, 5, 9 and 13 and a snare drum sound at positions 3, 7, 11 and 15.

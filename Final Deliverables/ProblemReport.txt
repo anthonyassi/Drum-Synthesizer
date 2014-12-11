@@ -1,0 +1,34 @@
+Team: tRiLLbEaTz
+Project: TBass
+Members: Alfred Young, Chris Egan, Giselle Guitierez, Anthony Assi, Gabe de la Mora
+
+Problem Report:
+
+Features Planned but Unimplemented:
+
+1) As a sound designer, I want to be able to control the synthesis parameters of each synth module so that I can create interesting percussive elements.
+ - didn't get to making sustain work correctly due to lack of jsyn library documentation 
+
+2) As a digital artist and computer application user, I want a polished user interface so that I can use it without impediments to my creativity such as having to work around bugs and learn idiosyncrasies of the application.
+ - didn't get to adding new project button, spent time polishing other areas of interface before adding new features
+
+3) As a percussive musician, I want an interface through which to sequence drum sounds as well as be able to alter the tempo of the sequencer's playback and add swing so that I can create a variety of styles of drum loops.
+ - didn't get to adding tempo/swing sliders due to unexpected complexity of multithreading
+
+4) As a sound designer, I want to access to simple effects such as reverb so that I can apply them to percussive modules and create more interesting percussive elements.
+ - didn't get to adding any effects, too time consuming to implement, spent time in other areas of project
+
+Exceptions/Bugs
+
+1) Synthesized tones experience extreme latency and sound choppy. Problem worsened when played from sequencer.
+
+2) Sequencer sometimes stops and starts unexpectedly, likely due to accrued latency over time.
+
+3) Lowpass filter does not work on synthesized noise sounds.
+
+4) Attack/release parameters have minute effects on volume envelope of synthesized tones
+
+5) Playing a sample throws messages from JSYN library that mixing block connections already exist. No effect of performance.
+
+6) Resizing window causes interface components to become obscured or invisible.
+
