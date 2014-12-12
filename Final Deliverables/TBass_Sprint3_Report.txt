@@ -1,0 +1,68 @@
+TEAM: tRiLLbEaTz
+PROJECT: TBass
+MEMBERS: Alfred Young, Gabe de la Mora, Anthony Assi, Christopher Egan, Giselle Gutierez
+
+
+WHAT THINGS SHOULD WE STOP DOING
+- Not asking for help if we are stuck.	 
+
+WHAT THINGS SHOULD WE START DOING
+- Ask each other for help if we find ourselves stuck. 	
+- Start earlier on our tasks.
+
+WHAT IS WORKING WELL THAT WE SHOULD CONTINUE DOING
+- Breaking down tasks to more manageable parts.
+- Division of labor for required documentation.
+
+
+WHAT WORK WAS COMPLETED
+1) As a digital artist and computer application user, I want a polished user interface so that I can use it without impediments to my creativity such as having to work around 
+bugs and learn idiosyncrasies of the application. 8 story points/15 work hours
+	- Add borders to channel pannels
+	- Add labels to sliders and channels
+
+2) As a percussive musician, I want an interface through which to sequence drum sounds as well as be able to alter the tempo of the sequencer's playback and add swing so that I
+can create a variety of styles of drum loops. 5 story points/10 work hours
+	- Create sequencer pannel with 16 beats (1 bar)
+
+3) As a sound designer, I want to access to simple effects such as reverb so that I can apply them to percussive modules and create more interesting percussive elements. 3 story points/4 work hours
+	- no part of this completed
+
+4) As a digital artist, I want to be able to export my compositions to audio files that I can use in a digital audio workstation. 3 story points/6 work hours (strech goal)
+	- no part of this completed
+
+WHAT WORK WAS NOT COMPLETED
+- As a digital artist and computer application user, I want a polished user interface so that I can use it without impediments to my creativity such as having to work around 
+bugs and learn idiosyncrasies of the application.
+	- Didn't get to adding new project button, spent time polishing other areas of interface before adding new features
+
+- As a percussive musician, I want an interface through which to sequence drum sounds as well as be able to alter the tempo of the sequencer's playback and add swing so that 
+I can create a variety of styles of drum loops.
+	- Didn't get to adding tempo/swing sliders due to unexpected complexity of multithreading
+
+- As a sound designer, I want to be able to control the synthesis parameters of each synth module so that I can create interesting percussive elements.
+	- Didn't get to making sustain work correctly due to lack of jsyn library documentation 
+
+- As a sound designer, I want to access to simple effects such as reverb so that I can apply them to percussive modules and create more interesting percussive elements.
+	- Didn't get to adding any effects, too time consuming to implement, spent time in other areas of project
+
+- As a digital artist, I want to be able to export my compositions to audio files that I can use in a digital audio workstation. 3 story points/6 work hours (strech goal)
+	- Didn't have time to reach this optional goal
+
+RATE OF COMPLETION
+Sprint 3: 
+	- 9/19 story points completed, 2.2 story points per day
+	- 19/30 work hours commited, 1.4 work hours per day.
+Sprint 2:
+	- 24/24 story points completed, 1.6 story points per day
+	- 48/48 work hours commited, 3.2 work hours per day
+Sprint 1:
+	- 5/12 Story Points completed, 0.3 story points per day
+	- 25/30 work hours commited, 1.8 work hours per day
+
+
+Average/Sum
+	- 38/55 story points completed,  1.2 story points per day
+	
+	- 92/108 work hours commited, 1.7 work hours per day
+
